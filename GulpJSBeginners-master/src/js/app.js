@@ -10,17 +10,26 @@ function mul(a, b)
 // var element = document.getElementsByClassName("item-products");
 	
 // declare function for "onMouseOver" event:
- function bigImg(element) {
+ function addActiveClass(element) {
+   var elevalue = element.getAttribute('class');
+   var x = document.querySelectorAll(".dropdownSection");
+  //  console.log(selector);
+  //  console.log(selector.length);
+   if(elevalue == "rootLink item-products hasDropdown colorize"){
+    x[1].classList.add("active");
+   } else if(elevalue == "rootLink item-developers hasDropdown colorize"){
+    x[2].classList.add("active");
+   } else {
+    x[3].classList.add("active");
+   }
     element.classList.add("active");
    var ele = document.querySelector("header");
    ele.className= "globalNav initialized overlayActive dropdownActive";
  }
- function bigImg(element) {
-    element.classList.add("active");
+ function removeActiveClass(element) {
+    element.classList.remove("active");
    var ele = document.querySelector("header");
-   ele.className= "globalNav initialized overlayActive dropdownActive";
+   ele.className= "globalNav initialized noDropdownTransition";
  }
 
 
-console.log(add(5,6));
-console.log(mul(5,6));
