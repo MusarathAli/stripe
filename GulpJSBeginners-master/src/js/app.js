@@ -11,6 +11,7 @@ function mul(a, b)
 	
 // declare function for "onMouseOver" event:
  function addActiveClass(element) {
+<<<<<<< HEAD
   element.classList.add("active");
  // var elevalue = element.getAttribute('class');
    var x = document.querySelectorAll(".dropdownSection");
@@ -67,5 +68,27 @@ function mul(a, b)
  var navbutton = document.querySelector(".mobile");
   navbutton.classList.remove("globalPopupActive");
 }
+=======
+   var elevalue = element.getAttribute('class');
+   var x = document.querySelectorAll(".dropdownSection");
+  //  console.log(selector);
+  //  console.log(selector.length);
+   if(elevalue == "rootLink item-products hasDropdown colorize"){
+    x[1].classList.add("active");
+   } else if(elevalue == "rootLink item-developers hasDropdown colorize"){
+    x[2].classList.add("active");
+   } else {
+    x[3].classList.add("active");
+   }
+    element.classList.add("active");
+   var ele = document.querySelector("header");
+   ele.className= "globalNav initialized overlayActive dropdownActive";
+ }
+ function removeActiveClass(element) {
+    element.classList.remove("active");
+   var ele = document.querySelector("header");
+   ele.className= "globalNav initialized noDropdownTransition";
+ }
+>>>>>>> fe59111cdb335cd173e5c064fa9c6a05d3eab290
 
 
