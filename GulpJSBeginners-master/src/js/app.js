@@ -73,8 +73,8 @@ function mul(a, b)
  //  ele.classList.add("globalPopupActive");
  }
  function removemobileActiveClass(ele) {
-  document.getElementById("mobilePopupContainer").setAttribute(
-    "style", " opacity: 0;");
+//   document.getElementById("mobilePopupContainer").setAttribute(
+//     "style", " opacity: 0;");
 //  var navbutton = document.querySelector(".mobile");
 //   navbutton.classList.remove("globalPopupActive");
 }
