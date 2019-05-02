@@ -78,5 +78,16 @@ function mul(a, b)
 //  var navbutton = document.querySelector(".mobile");
 //   navbutton.classList.remove("globalPopupActive");
 }
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  var res;
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      res= this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://jsonblob.com/api/jsonBlob/6766327f-607d-11e9-95ef-9bcb815ba4a4", true);
+  xhttp.send();
+}
 
 
